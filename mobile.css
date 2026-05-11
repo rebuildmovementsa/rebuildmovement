@@ -41,3 +41,17 @@
   [style*="display: grid"] { grid-template-columns: 1fr !important; gap: 24px !important; }
   [style*="display:grid"] { grid-template-columns: 1fr !important; gap: 24px !important; }
 }
+/* Centre the Africa's Recovery tag */
+.hero-tag {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Fix bank account number colour */
+a[href^="tel"],
+a[href^="mailto"],
+.donate-field-value a,
+.donate-field a {
+  color: var(--copper-light) !important;
+  text-decoration: none !important;
+}
