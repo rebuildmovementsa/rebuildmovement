@@ -55,3 +55,9 @@ a[href^="mailto"],
   color: var(--copper-light) !important;
   text-decoration: none !important;
 }
+/* Centre the MOVEMENT sub-text */
+.hero-sub {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+}
