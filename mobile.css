@@ -153,3 +153,34 @@ div {
     padding: 1.5rem 0;
   }
 }
+/* === NAV FIX === */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 16px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-logo {
+    font-size: 0.75rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+}
