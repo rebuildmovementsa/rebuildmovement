@@ -155,32 +155,96 @@ div {
 }
 /* === NAV FIX === */
 @media (max-width: 768px) {
+
+  /* Fix nav bar */
   nav {
-    padding: 0 16px;
-    height: auto;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 0 12px !important;
+    height: auto !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
   }
 
-  .nav-logo {
-    font-size: 0.75rem;
-  }
-
+  /* Nav links: wrap into 2 rows neatly */
   nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 4px 12px !important;
+    padding: 4px 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    width: 100% !important;
   }
 
   nav ul li a {
-    font-size: 0.7rem;
-    padding: 4px 8px;
+    font-size: 0.65rem !important;
+    padding: 3px 6px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .nav-logo {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  /* Hide the hero logo image that's causing the bronze blob */
+  .hero-logo,
+  .hero img,
+  .hero-image,
+  section:first-of-type img:not(.nav-logo-img) {
+    display: none !important;
+  }
+
+  /* Centre all hero / section content */
+  section {
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  /* Make sure nothing overflows */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix those wide elements bleeding off screen */
+  .hero,
+  [class*="hero"],
+  [class*="section"],
+  [class*="container"],
+  [class*="wrapper"] {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Centre headings and text */
+  h1, h2, h3, h4, p, blockquote {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  /* Buttons side by side or stacked */
+  .hero-buttons,
+  [class*="btn-group"],
+  [class*="buttons"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  a[class*="btn"],
+  [class*="button"],
+  .cta {
+    width: 80% !important;
+    text-align: center !important;
   }
 }
