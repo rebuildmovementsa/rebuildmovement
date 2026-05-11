@@ -292,6 +292,16 @@
         <input class="form-input" type="email" name="email" placeholder="you@example.com" required />
       </div>
       <div class="form-group">
+        <label class="form-label">I want to</label>
+        <select name="enquiry_type" required style="background:var(--dark-warm); border:1px solid rgba(184,115,51,0.25); color:var(--text-light); padding:14px 18px; font-family:'Lato', sans-serif; font-size:0.95rem; outline:none; transition:border-color 0.3s; width:100%; appearance:none; -webkit-appearance:none; cursor:pointer; background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22><path fill=%22%23b87333%22 d=%22M6 8L0 0h12z%22/></svg>'); background-repeat:no-repeat; background-position:right 18px center;">
+          <option value="" disabled selected style="color:var(--text-muted);">Select an option...</option>
+          <option value="Join a Session" style="background:var(--dark-warm);">Join a Session</option>
+          <option value="Become a Partner" style="background:var(--dark-warm);">Become a Partner</option>
+          <option value="Sponsor a Session" style="background:var(--dark-warm);">Sponsor a Session</option>
+          <option value="Workplace Partnership" style="background:var(--dark-warm);">Workplace Partnership</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label class="form-label">Message</label>
         <textarea class="form-textarea" name="message" placeholder="Tell us your story or how you'd like to get involved…" required></textarea>
       </div>
