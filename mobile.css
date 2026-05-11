@@ -1,187 +1,21 @@
 /* =============================================
-   REBUILD MOVEMENT — Mobile Responsiveness Fix
-   Add this file to your project and link it in
-   both index.html and contact.html (see below)
+   REBUILD MOVEMENT — Mobile CSS (complete)
    ============================================= */
 
-/* --- Base fixes --- */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* --- Fix text line length (your "funny line" issue) --- */
-p, li, blockquote, label {
-  max-width: 70ch;
-  line-height: 1.7;
-}
-
-/* --- Make all containers fluid --- */
-section,
-.container,
-.wrapper,
-main,
-header,
-footer,
-nav,
-article,
-div {
-  max-width: 100%;
-}
-
-/* =============================================
-   MOBILE STYLES (screens 768px and smaller)
-   ============================================= */
 @media (max-width: 768px) {
 
-  /* Body padding so content doesn't touch the edges */
-  body {
-    padding: 0 1rem;
-    font-size: 16px;
+  /* ── FRAME BORDER: hide on mobile, it clips content ── */
+  .frame-border {
+    display: none !important;
   }
 
-  /* Headings scale down nicely */
-  h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); line-height: 1.2; }
-  h2 { font-size: clamp(1.4rem, 5vw, 2rem);   line-height: 1.3; }
-  h3 { font-size: clamp(1.1rem, 4vw, 1.5rem); line-height: 1.4; }
-
-  /* Paragraphs and list items full width on mobile */
-  p, li, blockquote {
-    max-width: 100%;
-  }
-
-  /* Navigation: wrap and center items */
+  /* ── NAVIGATION ── */
   nav {
-    padding: 0.75rem 0;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  nav ul li a {
-    padding: 0.4rem 0.75rem;
-    display: inline-block;
-  }
-
-  /* Stack any side-by-side columns */
-  .flex,
-  [class*="flex-"],
-  [class*="row"],
-  [class*="col-"],
-  [class*="grid"] {
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-  }
-
-  /* Buttons: full width and easy to tap */
-  a[href], button, .btn, [class*="btn"] {
-    display: inline-block;
-    min-height: 44px;          /* minimum tap target */
-    padding: 0.6rem 1.2rem;
-  }
-
-  /* Hero / banner sections */
-  .hero,
-  [class*="hero"],
-  [class*="banner"],
-  [class*="header"] {
-    padding: 2rem 0;
-    text-align: center;
-  }
-
-  /* Cards and sections get breathing room */
-  section {
-    padding: 2rem 0;
-  }
-
-  /* Tables scroll horizontally instead of breaking layout */
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-  }
-
-  /* Forms */
-  input, textarea, select {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* Fix any element with a hard-coded width */
-  [style*="width:"],
-  [style*="width :"] {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-
-/* =============================================
-   SMALL PHONE STYLES (screens 480px and smaller)
-   ============================================= */
-@media (max-width: 480px) {
-  body {
-    padding: 0 0.75rem;
-  }
-
-  h1 { font-size: 1.7rem; }
-  h2 { font-size: 1.3rem; }
-
-  nav ul {
-    gap: 0.35rem;
-  }
-
-  section {
-    padding: 1.5rem 0;
-  }
-}
-/* === NAV FIX === */
-@media (max-width: 768px) {
-
-  /* Fix nav bar */
-  nav {
-    padding: 0 12px !important;
+    position: fixed !important;
+    padding: 8px 16px !important;
     height: auto !important;
     flex-wrap: wrap !important;
-    gap: 4px !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-  }
-
-  /* Nav links: wrap into 2 rows neatly */
-  nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 4px 12px !important;
-    padding: 4px 0 !important;
-    margin: 0 !important;
-    list-style: none !important;
-    width: 100% !important;
-  }
-
-  nav ul li a {
-    font-size: 0.65rem !important;
-    padding: 3px 6px !important;
-    letter-spacing: 0.1em !important;
+    gap: 6px !important;
   }
 
   .nav-logo {
@@ -189,62 +23,166 @@ div {
     letter-spacing: 0.15em !important;
   }
 
-  /* Hide the hero logo image that's causing the bronze blob */
-  .hero-logo,
-  .hero img,
-  .hero-image,
-  section:first-of-type img:not(.nav-logo-img) {
+  .nav-logo img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 4px 10px !important;
+    width: 100% !important;
+  }
+
+  .nav-links a {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.08em !important;
+    padding: 2px 4px !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 120px 20px 60px !important;
+    min-height: auto !important;
+  }
+
+  .hero-sun,
+  .hero-silhouette {
     display: none !important;
   }
 
-  /* Centre all hero / section content */
-  section {
-    text-align: center !important;
-    padding: 1.5rem 1rem !important;
+  .hero-tag {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.2em !important;
+    margin-bottom: 16px !important;
   }
 
-  /* Make sure nothing overflows */
+  .hero-wordmark {
+    font-size: clamp(3rem, 18vw, 5rem) !important;
+  }
+
+  .hero-sub {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.3em !important;
+  }
+
+  /* This is your bronze blob — hiding it */
+  .hero-strip {
+    display: none !important;
+  }
+
+  .hero-tagline h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem) !important;
+  }
+
+  .hero-quote {
+    font-size: 0.85rem !important;
+  }
+
+  .hero-ctas {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 80% !important;
+    text-align: center !important;
+    padding: 12px 20px !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 60px 20px !important;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── PROGRAM ── */
+  .program-intro {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .program-cards {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* ── VISION ── */
+  #vision {
+    padding: 60px 20px !important;
+  }
+
+  .vision-three {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* ── DONATE ── */
+  .donate-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .donate-box {
+    padding: 28px 20px !important;
+  }
+
+  /* ── PARTNERS ── */
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 40px 20px 30px !important;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+
+  /* ── GENERAL TYPOGRAPHY ── */
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2.5rem) !important;
+  }
+
+  .section-body {
+    max-width: 100% !important;
+  }
+
+  /* ── PREVENT OVERFLOW ── */
+  body {
+    overflow-x: hidden !important;
+  }
+
   * {
     max-width: 100% !important;
     box-sizing: border-box !important;
-  }
-
-  /* Fix those wide elements bleeding off screen */
-  .hero,
-  [class*="hero"],
-  [class*="section"],
-  [class*="container"],
-  [class*="wrapper"] {
-    width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
-  /* Centre headings and text */
-  h1, h2, h3, h4, p, blockquote {
-    text-align: center !important;
-    max-width: 100% !important;
-  }
-
-  /* Buttons side by side or stacked */
-  .hero-buttons,
-  [class*="btn-group"],
-  [class*="buttons"] {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 0.75rem !important;
-    width: 100% !important;
-  }
-
-  a[class*="btn"],
-  [class*="button"],
-  .cta {
-    width: 80% !important;
-    text-align: center !important;
   }
 }
